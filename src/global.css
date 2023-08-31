@@ -4,9 +4,5 @@ html, body {
   width: 100vw;
   max-height: 100vh;
   box-sizing: border-box;
-  /* overflow: auto; */
-}
-
-* {
-  /* outline: dashed red 1px; */
+  overflow: hidden;
 }
