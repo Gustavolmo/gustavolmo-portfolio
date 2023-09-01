@@ -5,8 +5,9 @@
 	import RandomCircle from './amimationComponents/RandomCircle.svelte';
 	import LineAcrossScreen from './amimationComponents/LineAcrossScreen.svelte';
 	import OribitalRoom from './amimationComponents/OribitalRoom.svelte';
+	import profilePicture from '../assets/profile-pic-head.png';
 
-const prop = 'GUSTAVO'
+	const prop = 'GUSTAVO';
 </script>
 
 <!-- <RandomCircle /> -->
@@ -14,8 +15,19 @@ const prop = 'GUSTAVO'
 	<OribitalRoom />
 </div> -->
 
+<header class="profile-header">
+	<!-- svelte-ignore a11y-img-redundant-alt -->
+	<img
+		class="profile-picture"
+		src={profilePicture}
+		width="160px"
+		height="160px"
+		alt="profile-picture"
+	/>
+	<LineAcrossScreen {prop} />
+</header>
 
-<LineAcrossScreen {prop}/>
+
 
 <style>
 	/* #canvas-container {
@@ -23,4 +35,13 @@ const prop = 'GUSTAVO'
 		top: 0;
 		left: 0;
 	} */
+
+	.profile-header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		/* gap: 16px; */
+		margin-top: 120px;
+	}
 </style>

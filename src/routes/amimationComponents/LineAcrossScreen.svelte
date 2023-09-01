@@ -9,7 +9,7 @@
 	onMount(() => {
 		const textElement = document.querySelector('.text');
 		if (textElement) {
-			canvasWidth = textElement.clientWidth -8;
+			canvasWidth = textElement.clientWidth - 4;
 		}
 
 		sketch = (p5: p5) => {
@@ -20,9 +20,9 @@
 			let ySpeed: number; // Speed of movement along the y-axis
 
 			p5.setup = () => {
-				p5.createCanvas(canvasWidth, 40);
+				p5.createCanvas(canvasWidth, 35);
 
-				xSpeed = canvasWidth / 20;
+				xSpeed = canvasWidth / 10;
 				ySpeed = 0;
 			};
 
@@ -57,6 +57,9 @@
 </section>
 
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+
 	.animation-wrap {
 		top: 0;
 		position: relative;
@@ -64,6 +67,8 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		overflow: hidden;
+		border-radius: 100px;
 	}
 
 	.text {
@@ -71,8 +76,9 @@
 		margin: 0;
 		top: 0;
 		color: #fff;
-		font-size: 60px;
-		line-height: 44px;
+		font-size: 45px;
+		line-height: 40px;
 		font-weight: bolder;
+		font-family: 'Monoton', cursive;
 	}
 </style>
