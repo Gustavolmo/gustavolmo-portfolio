@@ -36,6 +36,7 @@
 	.cover-down {
     z-index: 100;
     position: absolute;
+		border: 1px solid black;
     background-color: white;
 		margin: 0;
 		padding: 0;

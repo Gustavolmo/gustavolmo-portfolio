@@ -1,4 +1,4 @@
-<header class="empty-header"></header>
+<div class="empty-div" />
 
 <section class="projects-wrapper">
 	<div class="project">Event Sauce</div>
@@ -8,13 +8,13 @@
 </section>
 
 <style>
-  .empty-header {
-    position: absolute;
-    top: 0;
-    height: 20px;
-    width: 100vw;
-    background-color: white;
-  }
+	.empty-div {
+		position: absolute;
+		top: 0;
+		height: 20px;
+		width: 100vw;
+		background-color: white;
+	}
 
 	.projects-wrapper {
 		display: flex;
@@ -22,7 +22,7 @@
 		flex-wrap: wrap;
 		outline: dashed red;
 		width: 100vw;
-		height: 600px;
+		height: 680px;
 		margin: 0;
 		padding: 0;
 		padding-top: 80px;
@@ -31,16 +31,16 @@
 	}
 
 	.project {
-    flex: 1;
+		flex: 1;
 		border: solid black;
 		background-color: antiquewhite;
-    height: calc(100vh - 100px);
+		height: 600px;
 	}
 
-  @media (max-width: 1000px) {
-    .projects-wrapper {
-      display: flex;
-      flex-direction: column;
-    }
-  }
+	@media (max-width: 1000px) {
+		.projects-wrapper {
+			flex-direction: column;
+			height: 2000px;
+		}
+	}
 </style>
