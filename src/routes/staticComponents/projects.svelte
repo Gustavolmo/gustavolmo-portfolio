@@ -1,10 +1,14 @@
+<script>
+	import SingleProject from "./projectComponents/singleProject.svelte";
+</script>
+
 <div class="empty-div" />
 
 <section class="projects-wrapper">
-	<div class="project">Event Sauce</div>
-	<div class="project">Geo Notice</div>
-	<div class="project">Get Geo</div>
-	<div class="project">Eco Harbor</div>
+	<SingleProject />
+	<SingleProject />
+	<SingleProject />
+	<SingleProject />
 </section>
 
 <style>
@@ -30,17 +34,17 @@
 		box-sizing: border-box;
 	}
 
-	.project {
+	/* .project {
 		flex: 1;
 		border: solid black;
 		background-color: antiquewhite;
 		height: 600px;
-	}
+	} */
 
 	@media (max-width: 1000px) {
 		.projects-wrapper {
 			flex-direction: column;
-			height: 2000px;
+			height: 2400px;
 		}
 	}
 </style>
