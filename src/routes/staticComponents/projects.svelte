@@ -1,14 +1,17 @@
 <script>
-	import SingleProject from "./projectComponents/singleProject.svelte";
+	import EventSauce from "./projectComponents/eventSauce.svelte";
+	import GeoNotice from "./projectComponents/geoNotice.svelte";
+	import GetGeo from "./projectComponents/getGeo.svelte";
+	import PendelHub from "./projectComponents/pendelHub.svelte";
 </script>
 
 <div class="empty-div" />
 
 <section class="projects-wrapper">
-	<SingleProject />
-	<SingleProject />
-	<SingleProject />
-	<SingleProject />
+	<EventSauce />
+	<GetGeo />
+	<PendelHub />
+	<GeoNotice />
 </section>
 
 <style>
@@ -24,9 +27,8 @@
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		outline: dashed red;
 		width: 100vw;
-		height: 680px;
+		height: 580px;
 		margin: 0;
 		padding: 0;
 		padding-top: 80px;
@@ -44,7 +46,7 @@
 	@media (max-width: 1000px) {
 		.projects-wrapper {
 			flex-direction: column;
-			height: 2400px;
+			height: 1500px;
 		}
 	}
 </style>

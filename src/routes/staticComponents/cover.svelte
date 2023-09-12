@@ -23,13 +23,13 @@
 	.cover-inner {
 		display: flex;
 		flex-direction: column;
-		height: 90vh;
-		width: 90vw;
+		height: 96vh;
+		width: 96vw;
 		border: 1px solid;
 		align-items: center;
 		justify-content: space-between;
 		border-radius: 64px;
-		padding: 8px;
+		padding: 4px;
 	}
 
 	.cover-up,
@@ -70,22 +70,22 @@
 			transform: translateY(2%);
 		}
 		95% {
-			transform: translateY(-91%);
+			transform: translateY(-94%);
 		}
 		100% {
-			transform: translateY(-90%);
+			transform: translateY(-93%);
 		}
 	}
 
 	@keyframes slideDown {
 		0% {
-			transform: translateY(-90%);
+			transform: translateY(-93%);
 		}
 		30% {
-			transform: translateY(-92%);
+			transform: translateY(-95%);
 		}
 		40% {
-			transform: translateY(-92%);
+			transform: translateY(-95%);
 		}
 		95% {
 			transform: translateY(1%);
