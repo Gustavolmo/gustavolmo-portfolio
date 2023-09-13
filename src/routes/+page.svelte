@@ -2,9 +2,9 @@
 	import '../global.css';
 	import Cover from './staticComponents/cover.svelte';
 	import Footer from './staticComponents/footer.svelte';
-	import Projects from './staticComponents/projects.svelte';
+	import Content from './staticComponents/content.svelte';
 </script>
 
-<!-- <Cover /> -->
-<Projects />
+<Cover />
+<Content />
 <Footer />

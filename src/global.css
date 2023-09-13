@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;500;900&display=swap');
 
 * {
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 300;
   box-sizing: border-box;
+  /* font-family: 'Work Sans', sans-serif;
+  font-weight: 300; */
 }
 
 html, body {
@@ -13,7 +13,7 @@ html, body {
   height: 100vh;
   box-sizing: border-box;
   overflow: auto;
-  background-color: #efeeee;
+  background-color: #1e1e1e;
 }
 
 p {
