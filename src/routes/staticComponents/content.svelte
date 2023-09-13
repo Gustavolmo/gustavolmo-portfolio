@@ -27,37 +27,56 @@
 	<button on:click={handleBackground} class="content-section">BACKGROUND</button>
 	<button on:click={handleCurriculum} class="content-section">CURRICULUM</button>
 
-	<div class={expandProject ? "area-expand" : "area"}>PROJECTS COMPONENT</div>
-	<div class={expandBackground ? "area-expand" : "area"}>BACKGROUND COMPONENT</div>
-	<div class={expandCurriculum? "area-expand" : "area"}>CURRICULUM COMPONENT</div>
+	<div class={expandProject ? 'area-expand' : 'area'}>
+		<button class="handle-collapse" on:click={handleProjects}>hide</button>
+		<p>PROJECTS COMPONENT</p>
+	</div>
+
+	<div class={expandBackground ? 'area-expand' : 'area'}>
+		<button class="handle-collapse" on:click={handleBackground}>hide</button>
+		<p>BACKGROUND COMPONENT</p>
+	</div>
+
+	<div class={expandCurriculum ? 'area-expand' : 'area'}>
+		<button class="handle-collapse" on:click={handleCurriculum}>hide</button>
+		<p>CURRICULUM COMPONENT</p>
+	</div>
 </section>
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100;10..100,500;10..100,900&display=swap');
 	@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;500;900&display=swap');
 
+	.handle-collapse {
+		background: none;
+	}
+
 	.area {
-		padding: 60px 8px 8px;
+		padding: 48px 8px 8px;
 		position: absolute;
 		background-color: #ccc;
-		width: 60vw;
-		right: -60vw;
+		border-right: 12px solid #1e1e1e;
+		width: 0;
+		right: 0;
 		top: 0;
 		height: 100vh;
 		overflow: auto;
-		transition: .4s ease-in-out;
+		transition: 0.4s ease-in-out;
+		visibility: hidden;
 	}
 
 	.area-expand {
-		padding: 60px 8px 8px;
+		padding: 48px 8px 8px;
 		position: absolute;
 		background-color: #ccc;
+		border-right: 12px solid #1e1e1e;
 		width: 60vw;
 		right: 0;
 		top: 0;
 		height: 100vh;
 		overflow: auto;
-		transition: .4s ease-in-out;
+		transition: 0.4s ease-in-out;
+		visibility: visible;
 	}
 
 	.content-wrapper {
@@ -66,6 +85,7 @@
 		margin: 64px 0 16px;
 		padding: 8px 16px;
 		box-sizing: border-box;
+		z-index: 10;
 	}
 
 	.content-section {
@@ -87,9 +107,19 @@
 		padding-left: 8px;
 	}
 
+	@media (max-width: 950px) {
+		.area-expand {
+			width: 80vw;
+		}
+	}
+
 	@media (max-width: 450px) {
 		.content-section {
 			font-size: 80px;
+		}
+
+		.area-expand {
+			width: 84vw;
 		}
 	}
 
