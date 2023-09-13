@@ -5,6 +5,6 @@
 	import Projects from './staticComponents/projects.svelte';
 </script>
 
-<Cover />
+<!-- <Cover /> -->
 <Projects />
 <Footer />

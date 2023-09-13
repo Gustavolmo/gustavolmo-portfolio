@@ -1,7 +1,9 @@
 <script lang="ts">
+	let expand: boolean = false;
+	const handleExpandSection = () => expand = !expand;
 </script>
 
-<section class="background-image">
+<section class={expand ? "background-image-expanded" : "background-image"}>
 	<section class="project-card-style" />
 	<section class="project-card-style2" />
 	<section class="project-card">
@@ -9,11 +11,12 @@
 			<header class="header">
 				<img class="logo-image" src="src/assets/event-sauce.png" alt="Event Sauce" />
 				<h1 class="header__title">Event Sauce</h1>
+				<a href="https://event-sauce.vercel.app/" target="_blank">Visit the Website</a>
 			</header>
 
-			<p>Description</p>
-			<button>About</button>
-			<button>Visit the website</button>
+			<div class="buttons">
+				<button on:click={handleExpandSection}>About</button>
+			</div>
 		</div>
 	</section>
 </section>
@@ -30,7 +33,21 @@
 		background-repeat: no-repeat;
 		background-position: top;
 		overflow: hidden;
+		transition: .8s;
 	}
+
+	.background-image-expanded {
+		position: relative;
+		width: 100vw;
+		height: 500px;
+		background: url('src/assets/guests-in-card.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: top;
+		overflow: hidden;
+		transition: .8s;
+	}
+
 	.project-card-style,
 	.project-card {
 		position: absolute;
@@ -52,12 +69,12 @@
 		height: 100%;
 		width: 100%;
 		backdrop-filter: blur(8px);
-		transition: 0.4s;
+		transition: 0.8s;
 	}
 
 	.project-card-style2:hover {
 		backdrop-filter: blur(0px);
-		transition: 0.4s;
+		transition: 0.8s;
 	}
 
 	.header {
@@ -81,6 +98,13 @@
 
 	.content {
 		position: relative;
-		top: -80px;
+		top: -100px;
+	}
+
+	.buttons {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 40px;
 	}
 </style>

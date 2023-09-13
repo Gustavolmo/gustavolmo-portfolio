@@ -9,9 +9,12 @@
 
 <section class="projects-wrapper">
 	<EventSauce />
-	<GetGeo />
+	<EventSauce />
+	<EventSauce />
+	<EventSauce />
+	<!-- <GetGeo />
 	<PendelHub />
-	<GeoNotice />
+	<GeoNotice /> -->
 </section>
 
 <style>
@@ -26,12 +29,12 @@
 	.projects-wrapper {
 		display: flex;
 		justify-content: space-between;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
 		width: 100vw;
-		height: 580px;
+		height: 540px;
 		margin: 0;
 		padding: 0;
-		padding-top: 80px;
+		padding-top: 40px;
 		text-align: center;
 		box-sizing: border-box;
 	}
