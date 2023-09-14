@@ -55,7 +55,7 @@
 		padding: 48px 8px 8px;
 		position: absolute;
 		background-color: #ccc;
-		border-right: 12px solid #1e1e1e;
+		/* border-right: 12px solid #1e1e1e; */
 		width: 0;
 		right: 0;
 		top: 0;
@@ -69,7 +69,7 @@
 		padding: 48px 8px 8px;
 		position: absolute;
 		background-color: #ccc;
-		border-right: 12px solid #1e1e1e;
+		/* border-right: 12px solid #1e1e1e; */
 		width: 60vw;
 		right: 0;
 		top: 0;

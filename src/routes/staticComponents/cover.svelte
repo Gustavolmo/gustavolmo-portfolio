@@ -8,8 +8,8 @@
 <section class={coverDown ? 'cover-down' : 'cover-up'}>
 	<section class="cover-inner">
 		<div class="into">
-			<p>CREATIVE MIND</p>
-			<p class="name">Gustavo L.M. de Oliveira</p>
+			<p>GUSTAVO</p>
+			<p class="name">OLIVEIRA</p>
 		</div>
 
 		<div class="text">
@@ -35,12 +35,11 @@
 	}
 
 	.name {
-		font-size: 20px;
-		font-weight: 100;
-		/* font-family: 'Imbue', serif; */
-		font-family: 'Work Sans', sans-serif;
-		line-height: 4px;
-		margin-left: 16px;
+		/* font-size: 20px; */
+		/* font-weight: 100; */
+		font-family: 'Imbue', serif;
+		line-height: 52px;
+		/* margin-left: 16px; */
 	}
 
 	.into {
@@ -151,7 +150,7 @@
 
 		.fullstack-text {
 			flex-direction: column;
-			line-height: 56px;
+			line-height: 52px;
 		}
 
 		.into {
@@ -166,7 +165,7 @@
 	@media (max-width: 332px) {
 		.into {
 			font-size: 80px;
-			line-height: 56px;
+			line-height: 44px;
 		}
 
 		.text {
@@ -174,7 +173,7 @@
 			font-size: 80px;
 		}
 		.fullstack-text {
-			line-height: 36px;
+			line-height: 40px;
 		}
 	}
 </style>
