@@ -2,8 +2,6 @@
 
 * {
   box-sizing: border-box;
-  /* font-family: 'Work Sans', sans-serif;
-  font-weight: 300; */
 }
 
 html, body {
@@ -24,7 +22,7 @@ button {
   font-size: 16px;
   background: none;
   border: none;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(237, 237, 237, 0.6);
   transition: .2s ease-in-out;
   font-family: 'Work Sans', sans-serif;
 	font-weight: 300;
@@ -32,16 +30,15 @@ button {
 
 button:hover {
   cursor: pointer;
-  color: rgba(0, 0, 0, 1);
+  color: rgb(255, 255, 255);
   transition: .2s ease-in-out;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: #ccc;
 }
 
 a:hover {
-  text-decoration: underline;
   color: white;
 }

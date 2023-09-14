@@ -10,6 +10,7 @@
 		<div class="into">
 			<p>GUSTAVO</p>
 			<p class="name">OLIVEIRA</p>
+			<a class="download-cv" href="src/assets/Gustavo's CV.pdf" target="_blank"> Download CV</a>
 		</div>
 
 		<div class="text">
@@ -21,14 +22,24 @@
 		</div>
 
 		<button class="cover-button" on:click={makeCoverMove}
-			>{coverDown ? 'Learn more' : 'back'}</button
-		>
+			>{coverDown ? 'Learn more' : 'back'}
+		</button>
 	</section>
 </section>
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100;10..100,500;10..100,900&display=swap');
 	@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;500;900&display=swap');
+
+	.download-cv {
+		font-family: 'Work Sans', sans-serif;
+		font-size: 20px;
+		font-weight: 100;
+		margin: 0 16px;
+		padding: 4px 8px;
+		border: #eee 1px solid;
+		border-radius: 8px;
+	}
 
 	.fullstack-text {
 		display: flex;
@@ -70,9 +81,13 @@
 		border: none;
 		font-size: 20px;
 		background: none;
-		color: #ddd;
+		color: #ccc;
 		font-family: 'Work Sans', sans-serif;
 		font-weight: 100;
+	}
+
+	.cover-button:hover {
+		color: #eee;
 	}
 
 	.cover-inner {
