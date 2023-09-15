@@ -1,100 +1,74 @@
 <script>
 	import Background from './contentComponents/background.svelte';
 	import Project from './contentComponents/project.svelte';
-	import Curriculum from './projectComponents/curriculum.svelte';
 
 	let expandProject = false;
 	let expandBackground = false;
-	let expandCurriculum = false;
 
 	const handleProjects = () => {
 		expandProject = !expandProject;
 		expandBackground = false;
-		expandCurriculum = false;
 	};
 
 	const handleBackground = () => {
 		expandProject = false;
 		expandBackground = !expandBackground;
-		expandCurriculum = false;
-	};
-
-	const handleCurriculum = () => {
-		expandProject = false;
-		expandBackground = false;
-		expandCurriculum = !expandCurriculum;
 	};
 </script>
 
 <section class="content-wrapper">
-	<button on:click={handleCurriculum} class="content-section">CURRICULUM</button>
-	<button on:click={handleBackground} class="content-section">BACKGROUND</button>
-	<button on:click={handleProjects} class="content-section">HACKATHONS</button>
-
-	<div class={expandProject ? 'area-expand' : 'area'}>
-		<button class="handle-collapse" on:click={handleProjects}>hide</button>
-		<p>PROJECTS COMPONENT</p>
-		<Project />
-	</div>
+	<button on:click={handleBackground} class="content-section">ABOUT</button>
+	<button on:click={handleProjects} class="content-section">PROJECTS</button>
 
 	<div class={expandBackground ? 'area-expand' : 'area'}>
-		<button class="handle-collapse" on:click={handleBackground}>hide</button>
-		<p>BACKGROUND COMPONENT</p>
 		<Background />
 	</div>
-
-	<div class={expandCurriculum ? 'area-expand' : 'area'}>
-		<button class="handle-collapse" on:click={handleCurriculum}>hide</button>
-		<Curriculum />
-	</div>
 </section>
+
+<div class={expandProject ? 'area-expand' : 'area'}>
+	<Project />
+</div>
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100;10..100,500;10..100,900&display=swap');
 	@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;500;900&display=swap');
 
-	.handle-collapse {
-		margin-top: 8px;
-		color: rgb(121, 121, 121);
+	/* .handle-collapse {
+		margin-top: 4px;
+		padding: 0 8px;
+		color: #797979;
+		font-size: 20px;
 	}
 
 	.handle-collapse:hover {
-		color: rgb(54, 54, 54);
+		color: #ddd;
+	} */
+
+	.area,
+	.area-expand {
+		position: absolute;
+		background-color: #1e1e1e;
+		width: 60vw;
+		right: 0;
+		bottom: 0;
+		overflow-y: auto;
+		color: #ccc;
+		z-index: 10;
+		transition: 0.8s ease-in-out;
+		padding: 92px 32px 16px;
 	}
 
 	.area {
-		padding: 48px 16px 16px;
-		position: absolute;
-		/* background-color: #1e1e1e; */
-		background-color: #eee;
-		border-left: 1px solid #ccc;
-		width: 0;
-		right: 0;
-		top: 0;
-		height: 100vh;
-		overflow: auto;
-		color: #ccc;
-		z-index: 10;
+		height: 0px;
 		opacity: 0;
 		visibility: hidden;
-		transition: 0.4s ease-in-out;
+		transition: 0.8s ease-in-out;
 	}
 
 	.area-expand {
-		padding: 48px 16px 16px;
-		position: absolute;
-		/* background-color: #1e1e1e; */
-		background-color: #eee;
-		border-left: 1px solid #ccc;
-		width: 60vw;
-		right: 0;
-		top: 0;
 		height: 100vh;
-		overflow: auto;
-		color: #ccc;
-		z-index: 10;
 		opacity: 1;
-		transition: 0.4s ease-in-out;
+		transition: 0.8s ease-in-out;
 	}
 
 	.content-wrapper {
@@ -127,8 +101,11 @@
 	}
 
 	@media (max-width: 950px) {
+		.area,
 		.area-expand {
+			padding: 92px 16px 16px;
 			width: 80vw;
+			border-left: 1px solid #ccc;
 		}
 	}
 
@@ -137,6 +114,7 @@
 			font-size: 80px;
 		}
 
+		.area,
 		.area-expand {
 			width: 84vw;
 		}
