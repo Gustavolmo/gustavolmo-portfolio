@@ -12,7 +12,7 @@
 			passion. By September I landed my first developer job.
 		</p>
 		<p class="about-content">
-			Today I work at <a class="salt-link" href="https://salt.dev/">SALT</a> as a full stack web developer
+			Today I work at <a class="salt-link" target="_blank" href="https://salt.dev/">SALT</a> as a full stack web developer
 			consultant.
 		</p>
 	</article>
