@@ -26,39 +26,39 @@
 	}
 
 // TEST
-// if (typeof window !== 'undefined') {
-//   const body = document.querySelector('body');
-//   let startY = 0;
-//   let isScrolling = false;
+if (typeof window !== 'undefined') {
+  const body = document.querySelector('body');
+  // let startY = 0;
+  // let isScrolling = false;
 
-//   const handleCoverOnScroll = (event: TouchEvent) => {
-//     if (isScrolling) return;
+  const handleCoverOnScroll = (event: TouchEvent) => {
+    // if (isScrolling) return;
 
-//     const currentY = event.touches[0].pageY;
+    const currentY = event.touches[0].pageY;
 
-//     if (currentY > 100) {
-//       coverDown = false;
-//       isScrolling = true;
-//     } 
-// 		if (body && body.scrollTop === 0 && currentY < -200) {
-//       coverDown = true;
-//       isScrolling = true;
-//     }
-//   };
+    if (currentY > 200) {
+      coverDown = false;
+      // isScrolling = true;
+    } 
+		if (body && body.scrollTop === 0 && currentY < -200) {
+      coverDown = true;
+      // isScrolling = true;
+    }
+  };
 
-//   const handleTouchStart = (event: TouchEvent) => {
-//     let startY = event.touches[0].pageY;
-//     isScrolling = false;
-//   };
+  // const handleTouchStart = (event: TouchEvent) => {
+  //   let startY = event.touches[0].pageY;
+  //   isScrolling = false;
+  // };
 
-//   const handleTouchEnd = () => {
-//     isScrolling = false;
-//   };
+  // const handleTouchEnd = () => {
+  //   isScrolling = false;
+  // };
 
-//   window.addEventListener('touchstart', handleTouchStart);
-//   window.addEventListener('touchend', handleTouchEnd);
-//   window.addEventListener('touchmove', handleCoverOnScroll);
-// }
+  // window.addEventListener('touchstart', handleTouchStart);
+  // window.addEventListener('touchend', handleTouchEnd);
+  window.addEventListener('touchmove', handleCoverOnScroll);
+}
 // TEST END
 </script>
 
@@ -174,8 +174,9 @@
 		padding: 0;
 		display: flex;
 		flex-direction: column;
-		height: 100vh;
-		min-height: -webkit-fill-available;
+		/* height: 100vh; */
+		max-height: 100svh;
+		/* min-height: -webkit-fill-available; */
 		width: 100vw;
 		align-items: center;
 		justify-content: center;

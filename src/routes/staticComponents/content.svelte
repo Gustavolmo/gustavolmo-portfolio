@@ -69,19 +69,6 @@
 		padding: 120px 32px 16px;
 	}
 
-	/* .area {
-		height: 0px;
-		opacity: 0;
-		visibility: hidden;
-		transition: 0.8s ease-in-out;
-	}
-
-	.area-expand {
-		height: 100vh;
-		opacity: 1;
-		transition: 0.8s ease-in-out;
-	} */
-
 	.content-wrapper {
 		display: flex;
 		flex-direction: column;
@@ -100,9 +87,7 @@
 		color: #ddd;
 		font-size: 100px;
 		font-weight: 500;
-		/* max-width: 364px; */
 		transition: 0.2s ease-in-out;
-		/* padding-left: 4px; */
 	}
 
 	.--projects {
