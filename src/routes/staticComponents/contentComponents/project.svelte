@@ -81,11 +81,12 @@
 	}
 
 	.project-website {
-		border: #ccc 1px solid;
+		border: #ddd 1px solid;
+		text-decoration: none;
 		border-radius: 8px;
 		padding: 4px 8px;
 		font-size: 16px;
-		font-weight: 100;
+		font-weight: 300;
 		margin: 8px;
 	}
 
@@ -109,11 +110,12 @@
 		display: flex;
 		flex-direction: column;
 		padding: 0px 8px 8px;
+		margin-top: 40px;
 	}
 
 	.project-text {
 		font-size: 16px;
-		font-weight: 100;
+		font-weight: 300;
 		margin: 8px;
 	}
 
@@ -121,13 +123,23 @@
 		font-weight: 300;
 	}
 
-	@media (max-width: 680px) {
+	@media (max-width: 650px) {
 		.project-row {
 			flex-direction: column;
 		}
 
 		.project-iamge {
 			width: 100%;
+		}
+	}
+
+	@media (max-width: 350px) {
+		.card-header{
+			flex-direction: column;
+		}
+
+		.project-text {
+			text-align: center;
 		}
 	}
 </style>

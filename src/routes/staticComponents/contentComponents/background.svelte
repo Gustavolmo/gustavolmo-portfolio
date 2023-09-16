@@ -1,11 +1,11 @@
 <script>
-	import profilePic from '../../../assets/profile-pic-circlewhite.png';
+	// import profilePic from '../../../assets/profile-pic-circlewhite.png';
 </script>
 
 <article class="background-content">
-	<header class="header">
+	<!-- <header class="header">
 		<img class="profile-pic" src={profilePic} alt="profile-pic" />
-	</header>
+	</header> -->
 
 	<article class="about-row">
 		<p class="about-title">FOLLOWING YOUR PASSION</p>
@@ -30,13 +30,15 @@
 		font-weight: 300;
 		text-decoration: underline;
 	}
-
+	
 	.about-content {
 		font-size: 16px;
-		font-weight: 100;
+		font-weight: 300;
+		margin: 8px 0;
 	}
-
+	
 	.about-title {
+		margin: 8px 0;
 		font-weight: 300;
 	}
 
@@ -45,32 +47,14 @@
 		margin-bottom: 32px;
 	}
 
-	.header {
-		display: flex;
-		flex-direction: column;
-		align-items: baseline;
-		align-items: center;
-		/* min-width: 250px; */
-		/* margin-bottom: 128px; */
-		font-weight: 100;
-	}
-
-	.profile-pic {
-		widows: 120px;
-		height: 120px;
-		border: #ccc 0.5px solid;
-		border-radius: 100px;
-		border-radius: 100px;
-		margin-bottom: 64px;
-	}
-
 	.background-content {
 		color: #eee;
 		font-family: 'Work Sans', sans-serif;
 		font-weight: 300;
 		font-size: 20px;
 		display: flex;
-		flex-direction: column;
-		padding: 0px 8px 8px;
+		flex-direction: row;
+		gap: 16px;
+		/* padding: 0px 8px 8px; */
 	}
 </style>

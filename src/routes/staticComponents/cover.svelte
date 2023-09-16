@@ -1,9 +1,65 @@
-<script>
+<script lang="ts">
 	import cv from '../../assets/gustavo-cv.pdf';
+
 	let coverDown = true;
+
 	const makeCoverMove = () => {
 		coverDown = !coverDown;
 	};
+
+	if (typeof window !== 'undefined') {
+		const body = document.querySelector('body');
+
+		const handleCoverOnScroll = (event: WheelEvent) => {
+			if (event.deltaY > 200) {
+				coverDown = false;
+			}
+
+			if (body && body.scrollTop === 0) {
+				if (event.deltaY < -400) {
+					coverDown = true;
+				}
+			}
+		};
+
+		window.addEventListener('wheel', handleCoverOnScroll);
+	}
+
+// TEST
+// if (typeof window !== 'undefined') {
+//   const body = document.querySelector('body');
+//   let startY = 0;
+//   let isScrolling = false;
+
+//   const handleCoverOnScroll = (event: TouchEvent) => {
+//     if (isScrolling) return;
+
+//     const currentY = event.touches[0].pageY;
+
+//     if (currentY > 100) {
+//       coverDown = false;
+//       isScrolling = true;
+//     } 
+// 		if (body && body.scrollTop === 0 && currentY < -200) {
+//       coverDown = true;
+//       isScrolling = true;
+//     }
+//   };
+
+//   const handleTouchStart = (event: TouchEvent) => {
+//     let startY = event.touches[0].pageY;
+//     isScrolling = false;
+//   };
+
+//   const handleTouchEnd = () => {
+//     isScrolling = false;
+//   };
+
+//   window.addEventListener('touchstart', handleTouchStart);
+//   window.addEventListener('touchend', handleTouchEnd);
+//   window.addEventListener('touchmove', handleCoverOnScroll);
+// }
+// TEST END
 </script>
 
 <section class={coverDown ? 'cover-down' : 'cover-up'}>
@@ -23,7 +79,7 @@
 		</div>
 
 		<button class="cover-button" on:click={makeCoverMove}
-			>{coverDown ? 'Learn more' : 'back'}
+			>{coverDown ? 'Learn more' : 'Cover down'}
 		</button>
 	</section>
 </section>
@@ -34,8 +90,9 @@
 
 	.download-cv {
 		font-family: 'Work Sans', sans-serif;
+		text-decoration: none;
 		font-size: 20px;
-		font-weight: 100;
+		font-weight: 300;
 		margin: 0 16px;
 		padding: 4px 8px;
 		border: #eee 1px solid;
@@ -82,9 +139,9 @@
 		border: none;
 		font-size: 20px;
 		background: none;
-		color: #ccc;
+		color: #ddd;
 		font-family: 'Work Sans', sans-serif;
-		font-weight: 100;
+		font-weight: 300;
 	}
 
 	.cover-button:hover {
@@ -118,10 +175,11 @@
 		display: flex;
 		flex-direction: column;
 		height: 100vh;
+		min-height: -webkit-fill-available;
 		width: 100vw;
 		align-items: center;
 		justify-content: center;
-		animation-duration: 1s;
+		animation-duration: 0.8s;
 		animation-timing-function: ease-in-out;
 		animation-fill-mode: forwards;
 		color: #ddd;
@@ -139,9 +197,6 @@
 		0% {
 			transform: translateY(0%);
 		}
-		40% {
-			transform: translateY(-2%);
-		}
 		100% {
 			transform: translateY(-94%);
 		}
@@ -150,9 +205,6 @@
 	@keyframes slideDown {
 		0% {
 			transform: translateY(-94%);
-		}
-		30% {
-			transform: translateY(-90%);
 		}
 		100% {
 			transform: translateY(0%);
