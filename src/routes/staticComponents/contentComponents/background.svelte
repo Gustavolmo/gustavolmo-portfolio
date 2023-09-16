@@ -1,5 +1,5 @@
 <script>
-	import profilePic from '../../../assets/profile-pic-circle.png';
+	import profilePic from '../../../assets/profile-pic-circlewhite.png';
 </script>
 
 <article class="background-content">

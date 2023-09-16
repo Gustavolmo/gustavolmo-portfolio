@@ -1,5 +1,5 @@
 <script>
-	import cv from '../../assets/gustavo-cv.png';
+	import cv from '../../assets/gustavo-cv.pdf';
 	let coverDown = true;
 	const makeCoverMove = () => {
 		coverDown = !coverDown;
