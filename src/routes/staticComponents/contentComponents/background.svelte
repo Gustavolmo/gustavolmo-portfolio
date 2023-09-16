@@ -1,6 +1,10 @@
+<script>
+	import profilePic from '../../../assets/profile-pic-circle.png';
+</script>
+
 <article class="background-content">
 	<header class="header">
-		<img class="profile-pic" src="src/assets/profile-pic-circle.png" alt="profile-pic" />
+		<img class="profile-pic" src={profilePic} alt="profile-pic" />
 	</header>
 
 	<article class="about-row">
@@ -12,8 +16,8 @@
 			passion. By September I landed my first developer job.
 		</p>
 		<p class="about-content">
-			Today I work at <a class="salt-link" target="_blank" href="https://salt.dev/">SALT</a> as a full stack web developer
-			consultant.
+			Today I work at <a class="salt-link" target="_blank" href="https://salt.dev/">SALT</a> as a full
+			stack web developer consultant.
 		</p>
 	</article>
 </article>

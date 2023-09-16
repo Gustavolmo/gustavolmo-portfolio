@@ -1,4 +1,5 @@
 <script>
+	import cv from '../../assets/gustavo-cv.png';
 	let coverDown = true;
 	const makeCoverMove = () => {
 		coverDown = !coverDown;
@@ -10,7 +11,7 @@
 		<div class="into">
 			<p>GUSTAVO</p>
 			<p class="name">OLIVEIRA</p>
-			<a class="download-cv" href="src/assets/Gustavo's CV.pdf" target="_blank"> Download CV</a>
+			<a class="download-cv" href={cv} target="_blank">Download CV</a>
 		</div>
 
 		<div class="text">

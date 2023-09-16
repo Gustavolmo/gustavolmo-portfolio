@@ -1,6 +1,13 @@
+<script>
+	import eventSaucePic from '../../../assets/guests-in-card.png';
+	import pendelHub from '../../../assets/pendel-hub.png';
+	import geoNotice from '../../../assets/geo-notice.png';
+	import getGeo from '../../../assets/get-geo.png';
+</script>
+
 <article class="project-content">
 	<article class="project-row">
-		<img class="project-iamge" src="src/assets/guests-in-card.png" alt="event-souce" />
+		<img class="project-iamge" src={eventSaucePic} alt="event-souce" />
 		<div>
 			<div class="card-header">
 				<p class="project-title">EVENT-SAUCE</p>
@@ -14,7 +21,7 @@
 	</article>
 
 	<article class="project-row">
-		<img class="project-iamge" src="src/assets/pendel-hub.png" alt="pendel-hub" />
+		<img class="project-iamge" src={pendelHub} alt="pendel-hub" />
 		<div>
 			<div class="card-header">
 				<p class="project-title">PENDEL-HUB</p>
@@ -27,7 +34,7 @@
 	</article>
 
 	<article class="project-row">
-		<img class="project-iamge" src="src/assets/geo-notice.png" alt="geo-notice" />
+		<img class="project-iamge" src={geoNotice} alt="geo-notice" />
 		<div>
 			<div class="card-header">
 				<p class="project-title">GEO-NOTICE</p>
@@ -46,7 +53,7 @@
 	</article>
 
 	<article class="project-row">
-		<img class="project-iamge" src="src/assets/get-geo.png" alt="get-geo" />
+		<img class="project-iamge" src={getGeo} alt="get-geo" />
 		<div>
 			<div class="card-header">
 				<p class="project-title">GET-GEO</p>
@@ -91,7 +98,7 @@
 		display: flex;
 		/* border: 1px dashed white; */
 		gap: 8px;
-		margin-bottom:96px;
+		margin-bottom: 96px;
 	}
 
 	.project-content {
