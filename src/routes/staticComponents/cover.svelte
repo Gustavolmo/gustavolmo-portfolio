@@ -16,7 +16,7 @@
 			}
 
 			if (body && body.scrollTop === 0) {
-				if (event.deltaY < -400) {
+				if (event.deltaY < -300) {
 					coverDown = true;
 				}
 			}
@@ -25,41 +25,31 @@
 		window.addEventListener('wheel', handleCoverOnScroll);
 	}
 
-// TEST
-if (typeof window !== 'undefined') {
-  const body = document.querySelector('body');
-  // let startY = 0;
-  // let isScrolling = false;
+	// TEST
+	if (typeof window !== 'undefined') {
+		const body = document.querySelector('body');
+		let startY = 0;
 
-  const handleCoverOnScroll = (event: TouchEvent) => {
-    // if (isScrolling) return;
+		const handleCoverOnScroll = (event: TouchEvent) => {
+			const currentY = event.touches[0].pageY;
 
-    const currentY = event.touches[0].pageY;
+			if (body && body.scrollTop === 0 && startY - currentY > 200) {
+				coverDown = false;
+			}
 
-    if (currentY > 200) {
-      coverDown = false;
-      // isScrolling = true;
-    } 
-		if (body && body.scrollTop === 0 && currentY < -200) {
-      coverDown = true;
-      // isScrolling = true;
-    }
-  };
+			if (body && body.scrollTop === 0 && startY - currentY < -400) {
+				coverDown = true;
+			}
+		};
 
-  // const handleTouchStart = (event: TouchEvent) => {
-  //   let startY = event.touches[0].pageY;
-  //   isScrolling = false;
-  // };
+		const handleTouchStart = (event: TouchEvent) => {
+			startY = event.touches[0].pageY;
+		};
 
-  // const handleTouchEnd = () => {
-  //   isScrolling = false;
-  // };
-
-  // window.addEventListener('touchstart', handleTouchStart);
-  // window.addEventListener('touchend', handleTouchEnd);
-  window.addEventListener('touchmove', handleCoverOnScroll);
-}
-// TEST END
+		window.addEventListener('touchstart', handleTouchStart);
+		window.addEventListener('touchmove', handleCoverOnScroll);
+	}
+	// TEST END
 </script>
 
 <section class={coverDown ? 'cover-down' : 'cover-up'}>
