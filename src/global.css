@@ -1,44 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;500;900&display=swap');
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-  box-sizing: border-box;
-  overflow: auto;
-  background-color: #1e1e1e;
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	box-sizing: border-box;
+	overflow: auto;
+	background-color: #1e1e1e;
 }
 
 p {
-  margin: 8px;
+	margin: 8px;
 }
 
 button {
-  font-size: 16px;
-  background: none;
-  border: none;
-  color: rgba(237, 237, 237, 0.6);
-  transition: .2s ease-in-out;
-  font-family: 'Work Sans', sans-serif;
+	font-size: 16px;
+	background: none;
+	border: none;
+	color: rgba(237, 237, 237, 0.6);
+	transition: 0.2s ease-in-out;
+	font-family: 'Work Sans', sans-serif;
 	font-weight: 300;
 }
 
 button:hover {
-  cursor: pointer;
-  color: rgb(255, 255, 255);
-  transition: .2s ease-in-out;
+	cursor: pointer;
+	color: rgb(255, 255, 255);
+	transition: 0.2s ease-in-out;
 }
 
 a {
-  text-decoration: none;
-  color: #ccc;
+	text-decoration: none;
+	color: #ccc;
 }
 
 a:hover {
-  color: white;
+	color: white;
 }

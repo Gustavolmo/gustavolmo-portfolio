@@ -1,6 +1,10 @@
 <footer class="footer">
 	<p><a href="https://github.com/Gustavolmo" target="_blank"> GitHub </a></p>
-	<p><a href="https://www.linkedin.com/in/gustavo-l-m-de-oliveira-037243108/" target="_blank"> LinkedIn </a></p>
+	<p>
+		<a href="https://www.linkedin.com/in/gustavo-l-m-de-oliveira-037243108/" target="_blank">
+			LinkedIn
+		</a>
+	</p>
 </footer>
 
 <style>
