@@ -33,11 +33,13 @@
 		const handleCoverOnScroll = (event: TouchEvent) => {
 			const currentY = event.touches[0].pageY;
 
-			if (body && body.scrollTop === 0 && startY - currentY > 200) {
+			console.log('DIFF', startY - currentY)
+
+			if (body && body.scrollTop === 0 && startY - currentY > 100) {
 				coverDown = false;
 			}
 
-			if (body && body.scrollTop === 0 && startY - currentY < -400) {
+			if (body && body.scrollTop === 0 && startY - currentY < -200) {
 				coverDown = true;
 			}
 		};
