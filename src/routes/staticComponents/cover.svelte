@@ -1,57 +1,39 @@
 <script lang="ts">
 	import cv from '../../assets/gustavo-cv.pdf';
 
+	// TOGGLE COVER STATE
 	let coverDown = true;
-
-	const makeCoverMove = () => {
-		coverDown = !coverDown;
-	};
+	const makeCoverMove = () => (coverDown = !coverDown);
 
 	if (typeof window !== 'undefined') {
+		// DESKTOP
 		const body = document.querySelector('body');
 
 		const handleCoverOnScroll = (event: WheelEvent) => {
-			if (event.deltaY > 200) {
-				coverDown = false;
-			}
-
-			if (body && body.scrollTop === 0) {
-				if (event.deltaY < -300) {
-					coverDown = true;
-				}
-			}
+			let scrollDeltaY = event.deltaY;
+			if (coverDown && scrollDeltaY > 200) coverDown = false;
+			if (body && body.scrollTop === 0 && scrollDeltaY < -200) coverDown = true;
 		};
 
-		window.addEventListener('wheel', handleCoverOnScroll);
-	}
-
-	// TEST
-	if (typeof window !== 'undefined') {
-		const body = document.querySelector('body');
+		// MOBILE
 		let startY = 0;
-
-		const handleCoverOnScroll = (event: TouchEvent) => {
+		const handleCoverOnSwipe = (event: TouchEvent) => {
 			const currentY = event.touches[0].pageY;
+			let swipeDeltaYDiff = startY - currentY;
 
-			console.log('DIFF', startY - currentY)
-
-			if (body && body.scrollTop === 0 && startY - currentY > 100) {
-				coverDown = false;
-			}
-
-			if (body && body.scrollTop === 0 && startY - currentY < -200) {
-				coverDown = true;
-			}
+			if (coverDown && swipeDeltaYDiff > 100) coverDown = false;
+			if (body && body.scrollTop === 0 && swipeDeltaYDiff < -100) coverDown = true;
 		};
 
 		const handleTouchStart = (event: TouchEvent) => {
 			startY = event.touches[0].pageY;
 		};
 
+		// EVENT LISTNENERS
+		window.addEventListener('wheel', handleCoverOnScroll);
 		window.addEventListener('touchstart', handleTouchStart);
-		window.addEventListener('touchmove', handleCoverOnScroll);
+		window.addEventListener('touchmove', handleCoverOnSwipe);
 	}
-	// TEST END
 </script>
 
 <section class={coverDown ? 'cover-down' : 'cover-up'}>
