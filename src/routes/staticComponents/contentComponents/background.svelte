@@ -16,7 +16,7 @@
 			passion. By September I landed my first developer job.
 		</p>
 		<p class="about-content">
-			Today now I am collaborating at a start-up integrating state-managment with MobX, authetication, payment system, tests and UI.
+			Today I am collaborating at a start-up integrating state-managment with MobX, authetication, payment system, tests and UI.
 		</p>
 	</article>
 </article>
