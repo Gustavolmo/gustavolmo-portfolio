@@ -16,8 +16,7 @@
 			passion. By September I landed my first developer job.
 		</p>
 		<p class="about-content">
-			Today I work at <a class="salt-link" target="_blank" href="https://salt.dev/">SALT</a> as a full
-			stack web developer consultant.
+			Today now I am collaborating at a start-up integrating state-managment with MobX, authetication, payment system, tests and UI.
 		</p>
 	</article>
 </article>
@@ -25,11 +24,6 @@
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100;10..100,500;10..100,900&display=swap');
 	@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;500;900&display=swap');
-
-	.salt-link {
-		font-weight: 300;
-		text-decoration: underline;
-	}
 	
 	.about-content {
 		font-size: 16px;
