@@ -11,18 +11,18 @@
 
 		const handleCoverOnScroll = (event: WheelEvent) => {
 			let scrollDeltaY = event.deltaY;
-			if (coverDown && scrollDeltaY > 200) coverDown = false;
-			if (body && body.scrollTop === 0 && scrollDeltaY < -200) coverDown = true;
+			if (coverDown && scrollDeltaY > 120) coverDown = false;
+			if (body && body.scrollTop === 0 && scrollDeltaY < -160) coverDown = true;
 		};
 
 		// MOBILE
 		let startY = 0;
 		const handleCoverOnSwipe = (event: TouchEvent) => {
 			const currentY = event.touches[0].pageY;
-			let swipeDeltaYDiff = startY - currentY;
+			let swipeDeltaY = startY - currentY;
 
-			if (coverDown && swipeDeltaYDiff > 100) coverDown = false;
-			if (body && body.scrollTop === 0 && swipeDeltaYDiff < -100) coverDown = true;
+			if (coverDown && swipeDeltaY > 100) coverDown = false;
+			if (body && body.scrollTop === 0 && swipeDeltaY < -100) coverDown = true;
 		};
 
 		const handleTouchStart = (event: TouchEvent) => {
