@@ -13,7 +13,7 @@
 			After dedicating five years to studying for my Master's in Marketing and gaining valuable experience in administration — initially at the Brazilian Embassy in Stockholm and later as an executive assistant for Klarna's CTO in 2022 — I realized that something was missing. In January 2023, I made a bold decision to follow my passion. By September of that year, I successfully transitioned into my first role as a developer.
 		</p>
 		<p class="about-content">
-			Today, I'm thriving in a collaborative environment at a startup where I contribute to integrating state-management stores, authentication, unit tests, UI, and more.
+			Today, I'm thriving in a collaborative environment as a consultant.
 		</p>
 	</article>
 </article>

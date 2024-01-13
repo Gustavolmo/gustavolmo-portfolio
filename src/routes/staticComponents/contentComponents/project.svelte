@@ -3,9 +3,24 @@
 	import pendelHub from '../../../assets/pendel-hub.png';
 	import geoNotice from '../../../assets/geo-notice.png';
 	import getGeo from '../../../assets/get-geo.png';
+	import mangomoji from '../../../assets/mangomoji.jpg';
 </script>
 
 <article class="project-content">
+	<article class="project-row">
+		<img class="project-iamge" src={mangomoji} alt="event-souce" />
+		<div>
+			<div class="card-header">
+				<p class="project-title">MANGOMOJI</p>
+				<a class="project-website" target="_blank" href="https://mangomoki.com">Website</a
+				>
+			</div>
+
+			<p class="project-text">Co-founder - MVP in 2 months</p>
+			<p class="project-text">AI powered music player</p>
+		</div>
+	</article>
+
 	<article class="project-row">
 		<img class="project-iamge" src={eventSaucePic} alt="event-souce" />
 		<div>
