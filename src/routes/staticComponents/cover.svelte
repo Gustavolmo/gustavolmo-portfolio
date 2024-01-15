@@ -11,8 +11,8 @@
 
 		const handleCoverOnScroll = (event: WheelEvent) => {
 			let scrollDeltaY = event.deltaY;
-			if (coverDown && scrollDeltaY > 120) coverDown = false;
-			if (body && body.scrollTop === 0 && scrollDeltaY < -160) coverDown = true;
+			if (coverDown && scrollDeltaY > 80) coverDown = false;
+			if (body && body.scrollTop === 0 && scrollDeltaY < -120) coverDown = true;
 		};
 
 		// MOBILE
