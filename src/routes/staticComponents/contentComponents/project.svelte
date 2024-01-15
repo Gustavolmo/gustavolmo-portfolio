@@ -12,7 +12,7 @@
 		<div>
 			<div class="card-header">
 				<p class="project-title">MANGOMOJI</p>
-				<a class="project-website" target="_blank" href="https://mangomoki.com">Website</a
+				<a class="project-website" target="_blank" href="https://mangomoji.com">Website</a
 				>
 			</div>
 
