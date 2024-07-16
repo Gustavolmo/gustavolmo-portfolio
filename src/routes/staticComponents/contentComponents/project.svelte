@@ -1,23 +1,40 @@
 <script>
 	import eventSaucePic from '../../../assets/guests-in-card.png';
-	import pendelHub from '../../../assets/pendel-hub.png';
-	import geoNotice from '../../../assets/geo-notice.png';
 	import getGeo from '../../../assets/get-geo.png';
 	import mangomoji from '../../../assets/mangomoji.jpg';
+	import bootlr from '../../../assets/bootlr.png';
 </script>
 
 <article class="project-content">
 	<article class="project-row">
-		<img class="project-iamge" src={mangomoji} alt="event-souce" />
+		<img class="project-iamge" src={mangomoji} alt="mangomoji" />
 		<div>
 			<div class="card-header">
 				<p class="project-title">MANGOMOJI</p>
-				<a class="project-website" target="_blank" href="https://mangomoji.com">Website</a
-				>
+				<a class="project-website" target="_blank" href="https://mangomoji.com">Website</a>
 			</div>
+			<p class="project-text">Emoji powered music player</p>
+			<p>
+				Stack:
+				<li class="project-text">React</li>
+				<li class="project-text">Go</li>
+			</p>
+		</div>
+	</article>
 
-			<p class="project-text">Co-founder - MVP in 2 months</p>
-			<p class="project-text">AI powered music player</p>
+	<article class="project-row">
+		<img class="project-iamge" src={bootlr} alt="bootlr" />
+		<div>
+			<div class="card-header">
+				<p class="project-title">BOOTLR</p>
+				<a class="project-website" target="_blank" href="https://bootlr.com">Website</a>
+			</div>
+			<p class="project-text">AI assisted product search and shopping</p>
+			<p>
+				Stack:
+				<li class="project-text">Stencil</li>
+				<li class="project-text">Go</li>
+			</p>
 		</div>
 	</article>
 
@@ -29,40 +46,11 @@
 				<a class="project-website" target="_blank" href="https://event-sauce.vercel.app/">Website</a
 				>
 			</div>
-
-			<p class="project-text">Vacation Project - 4 weeks</p>
 			<p class="project-text">Guest managment tool synched with google calendar</p>
-		</div>
-	</article>
-
-	<article class="project-row">
-		<img class="project-iamge" src={pendelHub} alt="pendel-hub" />
-		<div>
-			<div class="card-header">
-				<p class="project-title">PENDEL-HUB</p>
-				<a class="project-website" target="_blank" href="https://pendel-hub.vercel.app/">Website</a>
-			</div>
-
-			<p class="project-text">Hackathon - 8 days</p>
-			<p class="project-text">Prototype for a ride sharing app targeting commuters</p>
-		</div>
-	</article>
-
-	<article class="project-row">
-		<img class="project-iamge" src={geoNotice} alt="geo-notice" />
-		<div>
-			<div class="card-header">
-				<p class="project-title">GEO-NOTICE</p>
-				<a
-					class="project-website"
-					target="_blank"
-					href="https://gustavolmo.github.io/geo-notice-CLIENT/">Website</a
-				>
-			</div>
-
-			<p class="project-text">Hackathon - 8 hours</p>
-			<p class="project-text">
-				Anonymous chatroom app integrated with openAI's moderation api for user posts
+			<p>
+				Stack:
+				<li class="project-text">Next</li>
+				<li class="project-text">MongoDB</li>
 			</p>
 		</div>
 	</article>
@@ -76,10 +64,12 @@
 					>Website</a
 				>
 			</div>
-
-			<p class="project-text">My first ever deployed app</p>
 			<p class="project-text">
-				Light-weight tool for collecting coordinates integrated with Google Maps
+				Tool created to help me get the lat. and lng. coordinates of polygon vertices in a map.
+			</p>
+			<p>
+				Stack:
+				<li class="project-text">TypeScript</li>
 			</p>
 		</div>
 	</article>
@@ -149,7 +139,7 @@
 	}
 
 	@media (max-width: 350px) {
-		.card-header{
+		.card-header {
 			flex-direction: column;
 		}
 
